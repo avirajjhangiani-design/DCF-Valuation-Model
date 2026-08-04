@@ -1,23 +1,3 @@
-"""
-DCF Valuation Tool
-==================
-Pulls live financial data for a public company via yfinance, builds a
-discounted cash flow (DCF) model, and exports a formatted Excel workbook
-with assumptions, projections, and the resulting valuation.
-
-Usage:
-    pip install yfinance pandas numpy openpyxl --break-system-packages
-    python dcf_valuation.py AAPL
-    python dcf_valuation.py MSFT --years 5 --growth 0.08 --terminal-growth 0.025
-
-Notes:
-    - Data quality depends entirely on what yfinance/Yahoo Finance exposes
-      for a given ticker. Some fields (esp. for smaller / non-US companies)
-      may be missing, in which case sensible fallbacks are used and flagged.
-    - This is a decision-support tool, not investment advice. Always sanity
-      check the pulled figures and assumptions before relying on the output.
-"""
-
 import argparse
 import sys
 from datetime import datetime
